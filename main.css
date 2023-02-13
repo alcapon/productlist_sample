@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.product-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+.product-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.product-item:hover {
+  outline: 1px solid red;
+}
+
+.product-detail {
+  padding: 0.5rem;
+}
+
+.product-img img {
+  width: 100%;
+}
+
+.product-price {
+  padding: 0.5rem;
+  font-size: 18px;
+}
