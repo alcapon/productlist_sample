@@ -15,3 +15,7 @@ jobs:
           username: agsofts
           password: ${{ secrets.ftp_password }}
           server-dir: nyla_dev/web/test/
+      - uses: snow-actions/line-notify@v1.1.0
+        with:
+          access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
+          message: Deploy
