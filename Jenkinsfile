@@ -16,6 +16,8 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'deploy'
+        sh 'rsync -avu --delete "/var/lib/jenkins/workspace/testpipe_main/" "/srv/http"'
+        echo 'Delopy finnish'
       }
     }
 
