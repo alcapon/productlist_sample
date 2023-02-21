@@ -17,4 +17,3 @@ jobs:
           server: ftp://206.189.45.148
           username: agsofts
           password: ${{ secrets.ftp_password }}
-          server-dir: nyla_dev/web/test/
