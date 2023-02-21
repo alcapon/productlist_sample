@@ -15,7 +15,9 @@ jobs:
           username: agsofts
           password: ${{ secrets.ftp_password }}
           server-dir: nyla_dev/web/test/
+      - name: Set current date as env variable
+        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
       - uses: snow-actions/line-notify@v1.1.0
         with:
           access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
-          message: Deploy test system >> ${{ env.TIME }}
+          message: Deploy test system >> $NOW
